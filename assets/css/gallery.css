@@ -1,0 +1,215 @@
+.gallery-hero {
+  height: 792px;
+  background-image: url("../images/gallery/gallery-hero.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gallery-hero__slider {
+  width: 100%;
+  overflow: visible;
+}
+
+.galleryReviewSlider .swiper-slide {
+  width: 760px;
+  display: flex;
+  justify-content: center;
+
+  transform: scale(0.82);
+  opacity: 0.65;
+  transition: transform 0.45s ease, opacity 0.45s ease;
+}
+
+.galleryReviewSlider .swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 10;
+}
+
+.review-card {
+  width: 760px;
+  height: 560px;
+  padding: 110px 90px 70px;
+
+  border-radius: 80px;
+  background: rgba(247, 135, 154, 0.8);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card strong {
+  font-family: var(--font-title);
+  font-size: 34px;
+  color: #000;
+}
+
+.review-card h2 {
+  margin-top: 8px;
+  font-family: var(--font-title);
+  font-size: 44px;
+  color: #fff;
+}
+
+.review-card p {
+  margin-top: 70px;
+  font-family: var(--font-base);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #fff;
+}
+
+.review-card span {
+  margin-top: auto;
+  margin-left: auto;
+  font-family: var(--font-base);
+  font-size: 34px;
+  font-weight: 800;
+  color: #000;
+}
+
+/* 실습사진 */
+.practice-photo-section {
+  padding: 120px 0 180px;
+  background: #fff;
+}
+
+.practice-photo-section__title {
+  margin-bottom: 120px;
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 56px;
+  color: var(--color-primary);
+}
+
+.practice-photo-grid {
+  max-width: 920px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px 48px;
+}
+
+.practice-photo-card {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+}
+
+.practice-photo-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* 기본 어긋남 */
+.practice-photo-card:nth-child(even) {
+  transform: translateY(80px);
+}
+
+/* 스크롤 등장 효과 */
+.practice-photo-card.gallery-reveal {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.practice-photo-card.gallery-reveal:nth-child(odd) {
+  transform: translateY(70px);
+}
+
+.practice-photo-card.gallery-reveal:nth-child(even) {
+  transform: translateY(150px);
+}
+
+.practice-photo-card.gallery-reveal.is-visible:nth-child(odd) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.practice-photo-card.gallery-reveal.is-visible:nth-child(even) {
+  opacity: 1;
+  transform: translateY(80px);
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  .gallery-hero {
+    height: 270px;
+  }
+
+  .galleryReviewSlider .swiper-slide {
+    width: 260px;
+  }
+
+  .review-card {
+    width: 260px;
+    height: 170px;
+    padding: 34px 28px 24px;
+    border-radius: 24px;
+  }
+
+  .review-card strong {
+    font-size: 14px;
+  }
+
+  .review-card h2 {
+    font-size: 18px;
+  }
+
+  .review-card p {
+    margin-top: 26px;
+    font-size: 14px;
+  }
+
+  .review-card span {
+    font-size: 13px;
+  }
+
+  .practice-photo-section {
+    padding: 80px 0 130px;
+  }
+
+  .practice-photo-section__title {
+    margin-bottom: 70px;
+    font-size: 42px;
+  }
+
+  .practice-photo-grid {
+    max-width: 320px;
+    gap: 16px 18px;
+  }
+
+  .practice-photo-card {
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.14);
+  }
+
+  .practice-photo-card:nth-child(even) {
+    transform: translateY(46px);
+  }
+
+  .practice-photo-card.gallery-reveal:nth-child(odd) {
+    transform: translateY(60px);
+  }
+
+  .practice-photo-card.gallery-reveal:nth-child(even) {
+    transform: translateY(100px);
+  }
+
+  .practice-photo-card.gallery-reveal.is-visible:nth-child(odd) {
+    transform: translateY(0);
+  }
+
+  .practice-photo-card.gallery-reveal.is-visible:nth-child(even) {
+    transform: translateY(46px);
+  }
+}

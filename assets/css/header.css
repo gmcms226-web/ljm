@@ -1,0 +1,322 @@
+/* ==========================================================================
+   Header
+   - 전체 높이 140px = 상단 유틸바 56px + 메인 헤더(로고+GNB) 84px
+   ========================================================================== */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-white);
+  z-index: 500;
+}
+
+/* 상단 유틸 바 (전화 / 오시는 길 / 상담신청 / 상담신청) */
+.header__top {
+  height: 56px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__top-inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.header__top-list {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 8px 24px;
+  border: 1px solid var(--color-primary-light);
+  border-radius: 30px;
+}
+
+.header__top-list li {
+  display: flex;
+  align-items: center;
+}
+
+.header__top-list li a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: inherit;
+}
+
+.header__top-list li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background-color: var(--color-border);
+  margin-left: 18px;
+}
+
+.header__top-list .icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+/* 메인 헤더 (로고 + GNB + 메뉴버튼) */
+.header__main {
+  height: 84px;
+}
+
+.header__main-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__logo img {
+  height: 44px;
+  width: 44px;
+  flex-shrink: 0;
+}
+
+.header__logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.header__logo-text strong {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.header__logo-text strong span {
+  color: var(--color-primary-dark);
+}
+
+.header__logo-text small {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+/* GNB */
+.header__nav-area {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.gnb {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.gnb__list {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.gnb__link {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  transition: var(--transition-base);
+}
+
+.gnb__item.is-active .gnb__link,
+.gnb__link:hover {
+  color: var(--color-primary-dark);
+}
+
+/* 우측 메뉴(햄버거) 버튼 - 캡처상 다크 사각 버튼 */
+.header__menu-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: var(--color-dark);
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.header__menu-btn span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: var(--color-white);
+  position: relative;
+}
+
+.header__menu-btn span::before,
+.header__menu-btn span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background-color: var(--color-white);
+}
+
+.header__menu-btn span::before {
+  top: -6px;
+}
+
+.header__menu-btn span::after {
+  top: 6px;
+}
+/* tablet */
+@media (max-width: 1199px) {
+  .header__top {
+    display: none;
+  }
+
+  .header__main {
+    height: 96px;
+  }
+
+  .gnb {
+    display: none;
+  }
+
+  .header__logo img {
+    width: 54px;
+    height: 54px;
+  }
+
+  .header__logo-text strong {
+    font-size: 1.65rem;
+  }
+
+  .header__logo-text small {
+    font-size: 0.82rem;
+  }
+
+  .header__menu-btn {
+    width: 58px;
+    height: 58px;
+    border-radius: 8px;
+  }
+
+  .header__menu-btn span,
+  .header__menu-btn span::before,
+  .header__menu-btn span::after {
+    width: 28px;
+    height: 4px;
+  }
+
+  .header__menu-btn span::before {
+    top: -10px;
+  }
+
+  .header__menu-btn span::after {
+    top: 10px;
+  }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  .header__main {
+    height: 88px;
+  }
+
+  .header__main-inner {
+    padding: 0 20px;
+  }
+
+  .header__logo {
+    gap: 10px;
+  }
+
+  .header__logo img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .header__logo-text strong {
+    font-size: 1.35rem;
+    line-height: 1.1;
+  }
+
+  .header__logo-text small {
+    margin-top: 4px;
+    font-size: 0.72rem;
+  }
+
+  .header__menu-btn {
+    display: flex;
+    width: 52px;
+    height: 52px;
+  }
+}
+/* 모바일 메뉴 */
+
+.mobile-menu{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:320px;
+  height:100vh;
+
+  background:rgba(80,80,80,.95);
+  backdrop-filter:blur(10px);
+
+  z-index:9999;
+
+  transition:.4s ease;
+}
+
+.mobile-menu.active{
+  right:0;
+}
+
+.mobile-menu__close{
+  position:absolute;
+  top:15px;
+  right:20px;
+
+  border:none;
+  background:none;
+
+  color:#fff;
+  font-size:32px;
+  cursor:pointer;
+}
+
+.mobile-menu__list{
+  margin-top:80px;
+}
+
+.mobile-menu__list li{
+  border-bottom:1px solid rgba(255,255,255,.7);
+}
+
+.mobile-menu__list a{
+  display:block;
+
+  padding:22px 30px;
+
+  color:#fff;
+  font-size:22px;
+  font-weight:700;
+}
+.mobile-menu{
+  display:none;
+}
+
+@media(max-width:767px){
+
+  .mobile-menu{
+    display:block;
+  }
+
+}

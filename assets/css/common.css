@@ -1,0 +1,438 @@
+/*타이틀, 서브타이틀 폰트*/
+@font-face {
+    font-family: 'YeogiOttaeJalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+/*텍스트 본문 폰트*/
+@font-face {
+    font-family: 'LineSeed';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Th.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LineSeed';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Rg.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LineSeed';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+/* ==========================================================================
+   Common Variables
+   ========================================================================== */
+:root {
+  --color-primary: #f4a7b9;
+  --color-primary-dark: #e8849c;
+  --color-primary-light: #fce8ed;
+  --color-dark: #2b2b2b;
+  --color-text: #333333;
+  --color-text-light: #777777;
+  --color-border: #e5e5e5;
+  --color-white: #ffffff;
+
+  --max-width: 1920px;
+  --side-padding: 80px;
+
+   --font-title: 'YeogiOttaeJalnan';
+  --font-base: 'LineSeed';
+  --transition-base: all 0.25s ease;
+}
+html{
+  scroll-behavior:smooth;
+}
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--side-padding);
+}
+
+/* 이미지 로드 실패 시 표시되는 placeholder */
+.img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+  color: #aaaaaa;
+  font-size: 0.85rem;
+  width: 100%;
+  height: 100%;
+}
+.btn-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-base);
+}
+
+.btn-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+/* ===============================
+   포메팀장 챗봇
+================================ */
+.chatbot {
+  position: fixed;
+  right: 24px;
+  bottom: 115px;
+  z-index: 9999;
+}
+
+.chatbot__button {
+  width: 92px;
+  height: 92px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  animation: chatbotFloat 2.4s ease-in-out infinite;
+}
+
+.chatbot__button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.chatbot__panel {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 105px;
+  width: 220px;
+  padding: 20px;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(0,0,0,.18);
+}
+
+.chatbot.active .chatbot__panel {
+  display: block;
+}
+
+.chatbot__panel strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+}
+
+.chatbot__panel p {
+  margin-bottom: 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.chatbot__panel a {
+  display: block;
+  padding: 11px 14px;
+  margin-top: 8px;
+  border-radius: 14px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+}
+
+@keyframes chatbotFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .chatbot {
+    right: 18px;
+    bottom: 96px;
+  }
+
+  .chatbot__button {
+    width: 72px;
+    height: 72px;
+  }
+
+  .chatbot__panel {
+    right: 0;
+    bottom: 84px;
+    width: 190px;
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .chatbot__panel strong {
+    font-size: 16px;
+  }
+
+  .chatbot__panel p,
+  .chatbot__panel a {
+    font-size: 13px;
+  }
+}
+body{
+  font-family: var(--font-base);
+}
+/*발바닥효과*/
+.paw-effect {
+  position: fixed;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%) scale(0.6);
+  opacity: 0;
+  animation: paw-pop 0.7s ease forwards;
+}
+
+@keyframes paw-pop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4) rotate(-12deg);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(-12deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -70%) scale(1.1) rotate(-12deg);
+  }
+}
+/*top버튼*/
+.top-btn {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: 900;
+
+  width: 76px;
+  height: 76px;
+  border: none;
+  border-radius: 50%;
+
+  background: var(--color-primary);
+  color: #fcf9f9;
+
+  font-family: var(--font-title);
+  font-size: 18px;
+  cursor: pointer;
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.top-btn:hover {
+  transform: translateY(-4px);
+}
+
+@media (max-width: 767px) {
+  .top-btn {
+    right: 20px;
+    bottom: 24px;
+    width: 54px;
+    height: 54px;
+    font-size: 13px;
+  }
+}
+/*로그인 모달*/
+.login-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+}
+.signup-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,.45);
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-modal.active {
+  display: flex;
+}
+.login-modal.is-open {
+  display: flex;
+}
+
+.login-modal__box {
+  position: relative;
+  width: 420px;
+  padding: 36px 36px 40px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.login-modal__close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  border: 0;
+  background: none;
+  font-size: 28px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.login-modal__title {
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: var(--font-base);
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+}
+
+.login-modal__google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  width: 100%;
+  height: 48px;
+  margin-bottom: 28px;
+
+  border: 1px solid #ddd;
+  background: #fff;
+
+  color: #111;
+  font-weight: 700;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.login-modal__google img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.login-modal__google span {
+  display: inline-block;
+}
+
+.login-modal__line {
+  position: relative;
+  margin: 28px 0;
+  height: 1px;
+  background: #e5e5e5;
+}
+
+.login-modal__line::after {
+  content: "또는";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 0 18px;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  color: #555;
+  font-size: 14px;
+}
+
+.login-modal__form input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #ddd;
+  padding: 0 16px;
+  font-size: 15px;
+}
+
+.login-modal__form input + input {
+  border-top: 0;
+}
+
+.login-modal__keep {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0 22px;
+  font-size: 14px;
+  color: #333;
+}
+
+.login-modal__submit {
+  width: 100%;
+  height: 48px;
+  border: 0;
+  background-color: var(--color-primary-dark) !important;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-modal__links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.login-modal__links a {
+  font-size: 14px;
+  color: #333;
+}
+
+@media (max-width: 767px) {
+  .login-modal__box {
+    width: calc(100% - 40px);
+    padding: 34px 24px 36px;
+  }
+}
+.login-modal__keep{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin:16px 0 22px;
+  font-size:14px;
+  color:#333;
+}
+
+.login-modal__keep input{
+  width:16px;
+  height:16px;
+  margin:0;
+  accent-color:#ff7b90;
+}

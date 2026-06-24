@@ -1,0 +1,209 @@
+.practice-section{
+  padding:100px 0;
+  background:#fff;
+}
+
+.practice-section__head{
+  display:flex;
+  align-items:center;
+  gap:60px;
+  margin-bottom:40px;
+}
+
+.practice-section__logo{
+  width:220px;
+}
+
+.practice-section__desc{
+  font-size:20px;
+  line-height:1.6;
+  font-weight:700;
+  color: var(--color-text-light);
+}
+
+.practice-slider img{
+    width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  display:block;
+  border-radius:16px;
+  border: 1px solid var(--color-primary)
+  
+}
+.practice-slider .swiper-slide {
+  width: 31%;
+}
+/* mobile */
+@media (max-width: 767px) {
+  .practice-section {
+    padding: 64px 0;
+   
+  }
+
+  .practice-section__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 32px;
+  }
+
+  .practice-section__logo {
+    width: 180px;
+  }
+
+  .practice-section__desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text-light); 
+  }
+
+  .practice-slider .swiper-slide {
+    width: 100%;
+  }
+
+  .practice-slider img {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+}
+/*slider -2 학원시설 섹션*/
+.academy-section {
+  padding: 120px 0;
+  
+  color: #fff;
+}
+
+.academy-section__inner {
+  border-top: 1px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+  padding: 70px 0 90px;
+}
+
+.academy-section__title {
+  margin-bottom: 120px;
+  font-family: var(--font-title);
+  font-size: 42px;
+  color: #333;
+}
+
+.academy-section__title span {
+  color: var(--color-primary);
+}
+
+.academy-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.academy-slider .swiper-slide {
+  width: 520px;
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid var(--color-primary);
+  
+}
+
+.academy-slider .swiper-slide-active {
+  width: 640px;
+  height: 380px;
+}
+
+.academy-slider__control {
+  position: absolute;
+  left: 50%;
+  bottom: 48px;
+  z-index: 30;
+  transform: translateX(-5%);
+
+  width: 300px;
+  height: 150px;
+  background: var(--color-primary);
+
+  border-radius: 0 42px 0 42px;
+  border: 1px solid var(--color-primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.academy-slider__control strong {
+  display: block;
+  font-family: var(--font-title);
+  font-size: 34px;
+  color: #fff;
+}
+
+.academy-slider__control p {
+  margin-top: 6px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.academy-slider__prev,
+.academy-slider__next {
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--color-primary);
+  font-size: 38px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  .academy-section {
+    padding: 70px 0;
+
+  }
+
+  .academy-section__inner {
+    padding: 40px 0 60px;
+  }
+
+  .academy-section__title {
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
+
+  .academy-slider {
+    overflow: hidden;
+  }
+
+  .academy-slider .swiper-slide,
+  .academy-slider .swiper-slide-active {
+    width: 100%;
+    height: 230px;
+    border-radius: 0;
+  }
+
+  .academy-slider__control {
+    left: 24px;
+    bottom: 24px;
+    transform: none;
+    width: 140px;
+    height: 96px;
+    border-radius: 0 42px 0 42px;
+  }
+
+  .academy-slider__control strong {
+    font-size: 20px;
+  }
+
+  .academy-slider__control p {
+    font-size: 17px;
+  }
+
+  .academy-slider__prev,
+  .academy-slider__next {
+    width: 28px;
+    height: 28px;
+    font-size: 28px;
+  }
+}

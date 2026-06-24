@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학원소개</title>
+<link rel="stylesheet" href="./assets/css/reset.css">
+<link rel="stylesheet" href="./assets/css/common.css">
+<link rel="stylesheet" href="./assets/css/header.css">
+<link rel="stylesheet" href="./assets/css/footer.css">
+<link rel="stylesheet" href="./assets/css/about.css">
+<link rel="stylesheet" href="./assets/css/contact.css">
+<link rel="stylesheet" href="./assets/css/footer.css">
+
+
+
+    
+</head>
+<body>
+ <!-- ==========================================================================
+       Header (전체 높이 140px)
+       ========================================================================== -->
+  <header class="header">
+    <!-- 상단 유틸바 56px -->
+    <div class="header__top">
+      <div class="inner header__top-inner">
+        <ul class="header__top-list">
+          <li>
+            <a href="tel:042-253-4089">
+              <img class="icon" src="./assets/images/icons/icon-phone.svg" alt="" />
+              <span>042-253-4089</span>
+            </a>
+          </li>
+          <li>
+            <a href="location.html">
+              <img class="icon" src="./assets/images/icons/icon-location.svg" alt="" />
+              <span>오시는 길</span>
+            </a>
+          </li>
+          <li>
+            <a href="notice.html#contact">
+              <img class="icon" src="./assets/images/icons/icon-chat.svg" alt="" />
+              <span>상담신청</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="login-open">
+              <img class="icon" src="./assets/images/icons/icon-person.svg" alt="" />
+              <span>로그인</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 메인 헤더 84px : 로고 + GNB + 메뉴버튼 -->
+    <div class="header__main">
+      <div class="inner header__main-inner">
+        <a href="./index.html" class="header__logo">
+          <!-- 로고 이미지 자리 : assets/images/logo/logo.png 로 직접 교체해주세요 -->
+          <img src="./assets/images/logo/logo.png" alt="이정민 애견미용학원 로고" />
+          <span class="header__logo-text">
+            <strong>이정민 <span>애견미용학원</span></strong>
+            <small>내 꿈을 향한 첫걸음, 취업 선호도 1위</small>
+          </span>
+        </a>
+
+        <div class="header__nav-area">
+          <nav class="gnb" aria-label="주 메뉴">
+            <ul class="gnb__list">
+              <li class="gnb__item is-active">
+                <a href="about.html"class="gnb__link">학원소개</a>
+              </li>
+              <li class="gnb__item">
+                <a href="index.html#course" class="gnb__link">교육과정</a>
+              </li>
+              <li class="gnb__item">
+                <a href="notice.html" class="gnb__link">공지사항</a>
+              </li>
+              <li class="gnb__item">
+                <a href="gallery.html" class="gnb__link">학생실습</a>
+              </li>
+              <li class="gnb__item">
+                <a href="#contact" class="gnb__link">상담문의</a>
+              </li>
+            </ul>
+          </nav>
+
+          <button type="button" class="header__menu-btn" aria-label="전체 메뉴">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+<!--햄버거메뉴-->
+<div class="mobile-menu">
+
+  <button class="mobile-menu__close">
+    ×
+  </button>
+
+  <ul class="mobile-menu__list">
+    <li><a href="#course">교육과정</a></li>
+    <li><a href="notice.html">공지사항</a></li>
+    <li><a href="gallery.html">갤러리</a></li>
+    <li><a href="#contact">상담문의</a></li>
+  </ul>
+
+</div>
+<!--소개 hero 섹션-->
+<section class="about-hero">
+  <div class="inner about-hero__inner">
+
+    <div class="about-hero__text">
+      <p>PET ACADEMY BRAND STORY</p>
+
+      <h2>
+        <span>이정민애견미용학원</span>
+        교육 철학과 브랜드 스토리
+      </h2>
+    </div>
+
+    <div class="about-hero__buttons">
+      <a href="about.html#contact" class="hero-btn">상담신청</a>
+      <a href="tel:042-253-4089" class="hero-btn">전화걸기</a>
+      <a href="location.html" class="hero-btn">오시는 길</a>
+    </div>
+
+  </div>
+</section>
+<!--교육관섹션-->
+<section class="about-system">
+  <div class="inner about-system__inner">
+
+    <span class="about-badge">SECTION · 교육 · 관리</span>
+
+    <div class="about-system__head">
+      <h2>브랜드 운영 관점에서 본 교육 시스템</h2>
+      <p>
+        입학에서 자격증 취득, 취업 · 창업 · 진학까지의 여정을
+        하나의 브랜드 경험으로 관리합니다.
+      </p>
+    </div>
+
+    <div class="about-system__list">
+      <article class="about-system__card">
+        <strong>01</strong>
+        <h3>상담 · 과정 매칭</h3>
+        <p>목표와 실력을 진단해 가장 효과적인 과정·기간을 설계합니다.</p>
+      </article>
+
+      <article class="about-system__card">
+        <strong>02</strong>
+        <h3>정규 · 자격증 커리큘럼</h3>
+        <p>1인 1견 실습으로 실기·이론·시험대비를 연결합니다.</p>
+      </article>
+
+      <article class="about-system__card">
+        <strong>03</strong>
+        <h3>전문 · 심화 과정 연계</h3>
+        <p>미용·행동·영양·아로마 등 심화 과정으로 성장합니다.</p>
+      </article>
+
+      <article class="about-system__card">
+        <strong>04</strong>
+        <h3>취업 · 창업 · 진학 지원</h3>
+        <p>교육 이후 커리어 단계까지 본사가 함께 설계합니다.</p>
+      </article>
+    </div>
+
+  </div>
+</section>
+<section class="director-section">
+  <div class="inner director-section__inner">
+
+    <div class="director-section__image">
+      <img src="./assets/images/about/director.jpg" alt="이정민 원장 소개 이미지">
+    </div>
+
+    <div class="director-section__content">
+      <p class="director-section__career">
+        건국대학원 동물매개치유학과 석사<br>
+        애견미용 국내최초 EU인증 강사자격<br>
+        현 한국애견협회 미용 심사위원<br>
+        현 한국애견협회 핸들러 심사위원<br>
+        현 한국애견협회 전견종 심사위원<br>
+        현 한국애견협회 부장심사위원<br>
+        전 한국애견협회 핸들러분과위원장<br>
+        현 UAKC 국제 심사위원<br>
+        현 이정민애견미용학원 원장<br>
+        현 한국애견협회 미용사범<br>
+        국가공인 반려견스타일리스트 1급자격<br>
+        NCS 국가직무능력표준 애견미용 자문위원<br>
+        스페인 마리나도르 애견미용,도그쇼 특별초청심사<br><br>
+
+        현 대전보건대학교 반려동물과 겸임교수<br>
+        서울종합예술실용학교 겸임교수<br>
+        스페인 중국 일본 대만등 국내외 미용대회및 도그쇼 초청심사<br>
+        현 이정민애견미용학원 원장
+      </p>
+
+      <div class="director-section__message">
+        <p>
+          안녕하세요<br>
+          이정민애견미용학원 이정민원장입니다.<br><br>
+          애견미용사 자격취득을 넘어서 경쟁력을 갖추어 당당한 애견미용전문가가 될 수 있도록 오랜 경험과 노하우로 여러분의 꿈을 이루기 위한 멘토가 되겠습니다
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!--상담문의 about 섹션-->
+
+<section id="contact" class="contact-section">
+  <div class="inner">
+
+    <div class="contact-logo">
+      <img src="./assets/images/logo/logo_b.png" alt="">
+    </div>
+
+   <p class="contact-subtitle">1분이면 끝!</p>
+<h2 class="contact-title">빠른상담신청</h2>
+
+    <form class="contact-form">
+
+      <div class="contact-row">
+        <div class="form-group">
+          <label>이름 *</label>
+          <input type="text" placeholder="">
+        </div>
+
+        <div class="form-group phone-group">
+          <label>전화번호 *</label>
+
+          <div class="phone-wrap">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+          </div>
+        </div>
+      </div>
+      <div class="contact-row bottom">
+
+       <div class="form-group form-group--select">
+          <label>희망과정</label>
+
+          <select>
+            <option>선택해주세요</option>
+            <option>일반반</option>
+            <option>창업반</option>
+            <option>국비반</option>
+          </select>
+        </div>
+
+        <div class="agree-box">
+          <label>
+            <input type="checkbox">
+            개인정보 수집 및 이용에 동의합니다.
+          </label>
+        </div>
+
+      </div>
+
+      <button type="submit" class="contact-submit">
+        상담신청
+      </button>
+
+    </form>
+
+  </div>
+</section>
+<!--footer 섹션-->
+<footer class="footer">
+  <div class="inner footer__inner">
+
+    <div class="footer__brand">
+      <img src="./assets/images/logo/logo.png" alt="" class="footer__symbol">
+
+      <div class="footer__brand-text">
+        <strong>
+          이정민 <span>애견미용학원</span>
+        </strong>
+        <p>내 꿈을 향한 첫걸음, 취업 선호도 1위</p>
+      </div>
+    </div>
+
+    <div class="footer__info">
+      <p>이정민애견미용학원</p>
+      <p>상호 : 이정민애견미용학원</p>
+      <p>대표 : 이정민</p>
+      <p>사업자등록번호 : 520-92-00208</p>
+      <p>주소 : 대전광역시 중구 선화서로 3, 3층 이정민 애견미용학원</p>
+      <p>HP : 010-7160-4089</p>
+      <p>Copyright © 이정민애견미용학원 All rights reserved.</p>
+    </div>
+
+    <div class="footer__call">
+      <p>대표전화</p>
+      <strong>042-253-4089</strong>
+    </div>
+
+  </div>
+</footer>
+
+<!-- 로그인 모달 -->
+<div class="login-modal" id="loginModal">
+  <div class="login-modal__box">
+    <button type="button" class="login-modal__close" aria-label="닫기">×</button>
+
+    <h2 class="login-modal__title">로그인</h2>
+
+    <button type="button" class="login-modal__google" id="googleLoginBtn">
+      <img src="./assets/images/icons/google.png" alt="Google">
+      <span>google로 시작하기</span>
+    </button>
+
+    <div class="login-modal__line"></div>
+
+    <form class="login-modal__form">
+      <input type="text" placeholder="아이디">
+      <input type="password" placeholder="비밀번호">
+
+      <label class="login-modal__keep">
+        <input type="checkbox" checked>
+        로그인상태유지
+      </label>
+
+      <button type="submit" class="login-modal__submit">로그인</button>
+    </form>
+
+    <div class="login-modal__links">
+      <a href="#">회원가입</a>
+      <a href="#">아이디 · 비밀번호 찾기</a>
+    </div>
+  </div>
+</div>
+<script src="./assets/js/common.js"></script>
+<script src="./assets/js/header.js"></script>
+</body>
+</html>

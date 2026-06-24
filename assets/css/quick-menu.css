@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Quick Menu (우측 고정, 스크롤해도 항상 화면에 떠 있음)
+   사이즈: 169 x 734
+   ========================================================================== */
+.quick-menu {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-65%);
+  z-index: 400;
+  width: 110px;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-primary);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  padding: 16px 10px;
+}
+
+.quick-menu__title {
+  color: var(--color-primary-dark);
+  text-align: center;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+/* 강아지 캐릭터 일러스트 자리 - 직접 이미지 교체 */
+.quick-menu__character {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-menu__character img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.quick-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  flex: 1;
+}
+
+.quick-menu__list li {
+  flex: 1;
+}
+
+.quick-menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: var(--transition-base);
+}
+
+.quick-menu__link:hover {
+  background-color: var(--color-primary-dark);
+}
+/* mobile */
+@media (max-width: 767px) {
+  .quick-menu {
+    display: none;
+  }
+}
+@media (max-width: 1199px) {
+  .quick-menu {
+    display: none;
+  }
+}

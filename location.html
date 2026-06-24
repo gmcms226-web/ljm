@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학원위치</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/about.css">
+    <link rel="stylesheet" href="./assets/css/contact.css">
+    <link rel="stylesheet" href="./assets/css/location.css">
+    <link rel="stylesheet" href="./assets/css/slider.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+     <!-- ==========================================================================
+       Header (전체 높이 140px)
+       ========================================================================== -->
+  <header class="header">
+    <!-- 상단 유틸바 56px -->
+    <div class="header__top">
+      <div class="inner header__top-inner">
+        <ul class="header__top-list">
+          <li>
+            <a href="tel:042-253-4089">
+              <img class="icon" src="./assets/images/icons/icon-phone.svg" alt="" />
+              <span>042-253-4089</span>
+            </a>
+          </li>
+          <li>
+            <a href="location.html">
+              <img class="icon" src="./assets/images/icons/icon-location.svg" alt="" />
+              <span>오시는 길</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#contact">
+              <img class="icon" src="./assets/images/icons/icon-chat.svg" alt="" />
+              <span>상담신청</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="login-open">
+              <img class="icon" src="./assets/images/icons/icon-person.svg" alt="" />
+              <span>로그인</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 메인 헤더 84px : 로고 + GNB + 메뉴버튼 -->
+    <div class="header__main">
+      <div class="inner header__main-inner">
+        <a href="./index.html" class="header__logo">
+          <!-- 로고 이미지 자리 : assets/images/logo/logo.png 로 직접 교체해주세요 -->
+          <img src="./assets/images/logo/logo.png" alt="이정민 애견미용학원 로고" />
+          <span class="header__logo-text">
+            <strong>이정민 <span>애견미용학원</span></strong>
+            <small>내 꿈을 향한 첫걸음, 취업 선호도 1위</small>
+          </span>
+        </a>
+
+        <div class="header__nav-area">
+          <nav class="gnb" aria-label="주 메뉴">
+            <ul class="gnb__list">
+              <li class="gnb__item is-active">
+                <a href="about.html"class="gnb__link">학원소개</a>
+              </li>
+              <li class="gnb__item">
+                <a href="index.html#course" class="gnb__link">교육과정</a>
+              </li>
+              <li class="gnb__item">
+                <a href="notice.html" class="gnb__link">공지사항</a>
+              </li>
+              <li class="gnb__item">
+                <a href="gallery.html" class="gnb__link">학생실습</a>
+              </li>
+              <li class="gnb__item">
+                <a href="index.html#contact" class="gnb__link">상담문의</a>
+              </li>
+            </ul>
+          </nav>
+
+          <button type="button" class="header__menu-btn" aria-label="전체 메뉴">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+<!--햄버거메뉴-->
+<div class="mobile-menu">
+
+  <button class="mobile-menu__close">
+    ×
+  </button>
+
+  <ul class="mobile-menu__list">
+    <li><a href="#course">교육과정</a></li>
+    <li><a href="notice.html">공지사항</a></li>
+    <li><a href="gallery.html">갤러리</a></li>
+    <li><a href="contact.html">상담문의</a></li>
+  </ul>
+
+</div>
+<section class="location-hero">
+  <div class="inner location-hero__inner">
+
+    <div class="location-hero__logo">
+      <img src="./assets/images/logo/banner-logo.JPG" alt="이정민 애견미용학원">
+    </div>
+
+    <h1>찾아오시는 길</h1>
+
+    <p>
+      학원 위치와 방문 정보를 확인해보세요.
+    </p>
+
+  </div>
+</section>
+<div id="map" class="location-map"></div>
+
+    <form class="location-search" id="locationSearchForm">
+  <img src="./assets/images/icons/quick-icon.jpg" alt="" class="location-search__icon">
+
+  <input
+    type="text"
+    id="locationSearchInput"
+    placeholder="내 위치 검색"
+  >
+
+  <button type="submit">검색</button>
+</form>
+
+    <div class="location-info">
+  <p><strong>주소</strong> 대전광역시 중구 선화서로 3, 3층 이정민 애견미용학원</p>
+  <p><strong>전화</strong> 042-253-4089</p>
+  <p><strong>중구청역 2번 출구에서 61m</strong></p>
+  <p id="distanceText"></p>
+</div>
+<!--로케이션 슬라이더 섹션-->
+<!--slider 2 학원시설 섹션-->
+<section class="academy-section">
+  <div class="inner academy-section__inner">
+    <h2 class="academy-section__title">
+      <span>이정민 애견미용학원</span> 둘러보기
+    </h2>
+
+    <div class="swiper academy-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./assets/images/academy/academy-01.jpg" alt="학원시설 강의실 01">
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/images/academy/academy-02.jpg" alt="학원시설 강의실 02">
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/images/academy/academy-03.jpg" alt="학원시설 실습실">
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/images/academy/academy-04.jpg" alt="학원시설">
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/images/academy/academy-05.jpg" alt="학원시설">
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/images/academy/academy-06.jpg" alt="학원시설">
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/images/academy/academy-07.jpg" alt="학원시설">
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/images/academy/academy-08.jpg" alt="학원시설">
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/images/academy/academy-09.jpg" alt="학원시설">
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/images/academy/academy-10.jpg" alt="학원시설">
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/images/academy/academy-11.jpg" alt="학원시설">
+        </div>
+      </div>
+
+      <div class="academy-slider__control">
+  <button class="academy-slider__prev" type="button">‹</button>
+
+  <div class="academy-slider__text">
+    <strong id="academyTitle">학원시설</strong>
+    <p id="academyName">강의실 01</p>
+  </div>
+
+  <button class="academy-slider__next" type="button">›</button>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--footer 섹션-->
+<footer class="footer">
+  <div class="inner footer__inner">
+
+    <div class="footer__brand">
+      <img src="./assets/images/logo/logo.png" alt="" class="footer__symbol">
+
+      <div class="footer__brand-text">
+        <strong>
+          이정민 <span>애견미용학원</span>
+        </strong>
+        <p>내 꿈을 향한 첫걸음, 취업 선호도 1위</p>
+      </div>
+    </div>
+
+    <div class="footer__info">
+      <p>이정민애견미용학원</p>
+      <p>상호 : 이정민애견미용학원</p>
+      <p>대표 : 이정민</p>
+      <p>사업자등록번호 : 520-92-00208</p>
+      <p>주소 : 대전광역시 중구 선화서로 3, 3층 이정민 애견미용학원</p>
+      <p>HP : 010-7160-4089</p>
+      <p>Copyright © 이정민애견미용학원 All rights reserved.</p>
+    </div>
+
+    <div class="footer__call">
+      <p>대표전화</p>
+      <strong>042-253-4089</strong>
+    </div>
+
+  </div>
+</footer>
+ <button type="button" class="top-btn" aria-label="상단으로 이동">
+  ▲
+</button>
+<!-- 로그인 모달 -->
+<div class="login-modal" id="loginModal">
+  <div class="login-modal__box">
+    <button type="button" class="login-modal__close" aria-label="닫기">×</button>
+
+    <h2 class="login-modal__title">로그인</h2>
+
+    <button type="button" class="login-modal__google" id="googleLoginBtn">
+      <img src="./assets/images/icons/google.png" alt="Google">
+      <span>google로 시작하기</span>
+    </button>
+
+    <div class="login-modal__line"></div>
+
+    <form class="login-modal__form">
+      <input type="text" placeholder="아이디">
+      <input type="password" placeholder="비밀번호">
+
+      <label class="login-modal__keep">
+        <input type="checkbox" checked>
+        로그인상태유지
+      </label>
+
+      <button type="submit" class="login-modal__submit">로그인</button>
+    </form>
+
+    <div class="login-modal__links">
+      <a href="#">회원가입</a>
+      <a href="#">아이디 · 비밀번호 찾기</a>
+    </div>
+  </div>
+</div>
+<script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=1i315mwdtx"></script>
+<script src="./assets/js/location-map.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./assets/js/swiper-init.js"></script>
+<script src="./assets/js/common.js"></script>
+<script src="./assets/js/header.js"></script>
+</body>
+</html>
