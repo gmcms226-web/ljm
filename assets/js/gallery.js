@@ -1,21 +1,28 @@
 const galleryReviewSlider = new Swiper(".galleryReviewSlider", {
   loop: true,
   centeredSlides: true,
-  slidesPerView: "auto",
-  spaceBetween: 80,
+  slidesPerView: 5,
+  spaceBetween: 20,
   speed: 700,
 
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
+    pauseOnMouseEnter: true,
   },
 
   breakpoints: {
     0: {
-      spaceBetween: 24,
+      slidesPerView: 1,
+      spaceBetween: 16,
     },
-    768: {
-      spaceBetween: 80,
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 20,
     }
   }
 });

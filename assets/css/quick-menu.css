@@ -59,8 +59,10 @@
 
 .quick-menu__link {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 5px;
   width: 100%;
   height: 100%;
   border-radius: 14px;
@@ -73,6 +75,12 @@
 
 .quick-menu__link:hover {
   background-color: var(--color-primary-dark);
+}
+
+.quick-menu__icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
 }
 /* mobile */
 @media (max-width: 767px) {

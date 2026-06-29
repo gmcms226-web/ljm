@@ -1,12 +1,12 @@
 .notice-section {
-  padding: 90px 0 120px;
+  padding: var(--sp-section) 0;
   background: #fff;
 }
 
 .notice-section__title {
-  margin-bottom: 90px;
+  margin-bottom: var(--sp-16);
   font-family: var(--font-title);
-  font-size: 40px;
+  font-size: var(--fs-section);
   color: var(--color-primary);
 }
 
@@ -44,34 +44,34 @@
   border-radius: 10px;
   background: var(--color-primary);
   color: #fff;
-  font-size: 14px;
+  font-size: var(--fs-sm);
   font-weight: 800;
 }
 
 .notice-card h3 {
   font-family: var(--font-base);
-  font-size: 18px;
+  font-size: var(--fs-md);
   font-weight: 800;
   line-height: 1.45;
   color: #111;
 }
 
 .notice-card p {
-  margin-top: 28px;
-  font-size: 15px;
+  margin-top: var(--sp-6);
+  font-size: var(--fs-base);
   line-height: 1.6;
   color: #777;
 }
 
 @media (max-width: 767px) {
   .notice-section {
-    padding: 70px 0 90px;
+    padding: var(--sp-20) 0;
   }
 
   .notice-section__title {
     text-align: center;
-    margin-bottom: 60px;
-    font-size: 40px;
+    margin-bottom: var(--sp-12);
+    font-size: var(--fs-2xl);
   }
 
   .notice-list {
@@ -90,16 +90,16 @@
   }
 
   .notice-badge {
-    font-size: 11px;
+    font-size: var(--fs-xs);
     padding: 4px 10px;
   }
 
   .notice-card h3 {
-    font-size: 14px;
+    font-size: var(--fs-sm);
   }
 
   .notice-card p {
-    margin-top: 20px;
-    font-size: 11px;
+    margin-top: var(--sp-4);
+    font-size: var(--fs-xs);
   }
 }

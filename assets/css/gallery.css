@@ -1,5 +1,5 @@
 .gallery-hero {
-  height: 792px;
+  height: 500px;
   background-image: url("../images/gallery/gallery-hero.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -16,12 +16,11 @@
 }
 
 .galleryReviewSlider .swiper-slide {
-  width: 760px;
   display: flex;
   justify-content: center;
 
-  transform: scale(0.82);
-  opacity: 0.65;
+  transform: scale(0.75);
+  opacity: 0.55;
   transition: transform 0.45s ease, opacity 0.45s ease;
 }
 
@@ -31,47 +30,87 @@
   z-index: 10;
 }
 
-.review-card {
-  width: 760px;
-  height: 560px;
-  padding: 110px 90px 70px;
+.galleryReviewSlider .swiper-slide-active .review-card {
+  background: #fff;
+  box-shadow: 0 20px 56px rgba(201, 72, 102, 0.4);
+}
 
-  border-radius: 80px;
-  background: rgba(247, 135, 154, 0.8);
+.galleryReviewSlider .swiper-slide-active .review-card::before {
+  content: '"';
+  font-size: 52px;
+  line-height: 0.8;
+  color: var(--color-primary-dark);
+  font-family: Georgia, serif;
+  align-self: flex-start;
+  margin-left: 8px;
+}
+
+.galleryReviewSlider .swiper-slide-active .review-card strong {
+  background: var(--color-primary-dark);
+  color: #fff;
+}
+
+.galleryReviewSlider .swiper-slide-active .review-card h2 {
+  color: var(--color-primary-dark);
+}
+
+.galleryReviewSlider .swiper-slide-active .review-card p {
+  color: #444;
+  font-style: italic;
+}
+
+.galleryReviewSlider .swiper-slide-active .review-card span {
+  color: var(--color-primary-dark);
+  font-weight: 800;
+}
+
+.review-card {
+  width: 100%;
+  height: 300px;
+  padding: 22px 24px;
+
+  border-radius: 24px;
+  background: linear-gradient(145deg, #e8849c, #c94866);
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
 }
 
 .review-card strong {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   font-family: var(--font-title);
-  font-size: 34px;
-  color: #000;
+  font-size: var(--fs-sm, 13px);
+  color: #fff;
+  letter-spacing: 0.03em;
 }
 
 .review-card h2 {
-  margin-top: 8px;
   font-family: var(--font-title);
-  font-size: 44px;
+  font-size: var(--fs-xl);
   color: #fff;
 }
 
 .review-card p {
-  margin-top: 70px;
   font-family: var(--font-base);
-  font-size: 38px;
-  font-weight: 700;
-  line-height: 1.35;
-  color: #fff;
+  font-size: var(--fs-md);
+  font-weight: 600;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .review-card span {
-  margin-top: auto;
-  margin-left: auto;
   font-family: var(--font-base);
-  font-size: 34px;
+  font-size: var(--fs-base);
   font-weight: 800;
-  color: #000;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* 실습사진 */
@@ -81,10 +120,10 @@
 }
 
 .practice-photo-section__title {
-  margin-bottom: 120px;
+  margin-bottom: var(--sp-16);
   text-align: center;
   font-family: var(--font-title);
-  font-size: 56px;
+  font-size: var(--fs-section);
   color: var(--color-primary);
 }
 
@@ -98,6 +137,7 @@
 }
 
 .practice-photo-card {
+  position: relative;
   width: 100%;
   overflow: hidden;
   border-radius: 18px;
@@ -109,6 +149,40 @@
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
+}
+
+.gallery-photo__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 14px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  pointer-events: none;
+}
+
+.practice-photo-card:hover .gallery-photo__overlay {
+  opacity: 1;
+}
+
+.gallery-photo__overlay strong {
+  display: block;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.gallery-photo__overlay span {
+  display: block;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.78rem;
+  margin-top: 5px;
 }
 
 /* 기본 어긋남 */
@@ -146,32 +220,38 @@
     height: 270px;
   }
 
-  .galleryReviewSlider .swiper-slide {
-    width: 260px;
+  .review-card {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    padding: 28px 24px;
+    border-radius: 20px;
+    gap: 8px;
+    justify-content: center;
   }
 
-  .review-card {
-    width: 260px;
-    height: 170px;
-    padding: 34px 28px 24px;
-    border-radius: 24px;
+  .galleryReviewSlider .swiper-slide-active {
+    opacity: 0.8;
+  }
+
+  .galleryReviewSlider .swiper-slide-active .review-card::before {
+    display: none;
   }
 
   .review-card strong {
-    font-size: 14px;
+    font-size: 11px;
   }
 
   .review-card h2 {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .review-card p {
-    margin-top: 26px;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .review-card span {
-    font-size: 13px;
+    font-size: 11px;
   }
 
   .practice-photo-section {

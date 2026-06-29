@@ -1,6 +1,6 @@
 .footer {
-  padding: 90px 0;
-  background: #f6d8c8;
+  padding: var(--sp-20) 0;
+  background: #1D2027;
 }
 
 .footer__inner {
@@ -24,8 +24,8 @@
 
 .footer__brand-text strong {
   font-family: var(--font-title);
-  font-size: 38px;
-  color: #222;
+  font-size: var(--fs-2xl);
+  color: #fff;
 }
 
 .footer__brand-text strong span {
@@ -34,28 +34,28 @@
 
 .footer__brand-text p {
   margin-top: 8px;
-  font-size: 18px;
-  color: #555;
+  font-size: var(--fs-md);
+  color: #fff;
 }
 
 .footer__info {
-  font-size: 20px;
-  line-height: 1.45;
+  font-size: var(--fs-base);
+  line-height: 1.6;
   font-weight: 700;
   color: #fff;
 }
 
 .footer__call p {
-  margin-bottom: 22px;
+  margin-bottom: var(--sp-6);
   font-family: var(--font-title);
-  font-size: 38px;
+  font-size: var(--fs-2xl);
   color: #fff;
 }
 
 .footer__call strong {
-  font-size: 38px;
+  font-size: var(--fs-2xl);
   font-weight: 800;
-  color: #fff;
+  color: var(--color-primary);
 }
 
 .footer__top {
@@ -93,16 +93,16 @@
   }
 
   .footer__brand-text strong {
-    font-size: 22px;
+    font-size: var(--fs-lg);
   }
 
   .footer__brand-text p {
-    font-size: 12px;
+    font-size: var(--fs-xs);
   }
 
   .footer__info {
-    font-size: 11px;
-    line-height: 1.5;
+    font-size: var(--fs-xs);
+    line-height: 1.6;
   }
 
   .footer__call {

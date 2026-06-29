@@ -13,18 +13,18 @@
 }
 
 .contact-subtitle {
-  margin-bottom:8px;
+  margin-bottom: var(--sp-4);
 
   font-family:var(--font-base);
-  font-size:28px;
+  font-size:var(--fs-lg);
   font-weight:700;
   color:#222;
 }
 
 .contact-title {
-   margin-bottom:56px;
+  margin-bottom: var(--sp-16);
   font-family:var(--font-title);
-  font-size:42px;
+  font-size:var(--fs-section);
   line-height:1;
   color:var(--color-primary);
 }
@@ -113,7 +113,8 @@
 
 .course-buttons button:hover,
 .course-buttons button.is-active {
-  background: #f7a7ba;
+  background: #d17389;
+  border-color: #d17389;
   color: #fff;
 }
 
@@ -142,14 +143,109 @@
   display: block;
   width: 180px;
   height: 60px;
-  margin: 60px auto 0;
+  margin: var(--sp-16) auto 0;
   border: none;
   border-radius: 40px;
   background: #f7a7ba;
   color: #fff;
   font-family: var(--font-title);
-  font-size: 22px;
+  font-size: var(--fs-lg);
   cursor: pointer;
+}
+
+/* 상담 완료 모달 */
+.consult-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.consult-modal.is-open {
+  display: flex;
+}
+
+.consult-modal__box {
+  position: relative;
+  width: 360px;
+  padding: 52px 36px 44px;
+  background: #fff;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(201, 72, 102, 0.18);
+  animation: consultPop 0.28s ease;
+}
+
+@keyframes consultPop {
+  from { transform: scale(0.88); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+.consult-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  border: 0;
+  background: none;
+  font-size: 26px;
+  color: #bbb;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.consult-modal__icon {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 38px;
+  color: #fff;
+  font-weight: 900;
+}
+
+.consult-modal__title {
+  font-family: var(--font-title);
+  font-size: var(--fs-2xl);
+  color: var(--color-primary-dark);
+  margin-bottom: 12px;
+}
+
+.consult-modal__desc {
+  font-size: var(--fs-base);
+  color: #777;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.consult-modal__btn {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  background: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-title);
+  font-size: var(--fs-lg);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.consult-modal__btn:hover {
+  background: var(--color-primary-dark);
+}
+
+@media (max-width: 767px) {
+  .consult-modal__box {
+    width: calc(100% - 48px);
+    padding: 44px 28px 36px;
+  }
 }
 
 /* mobile */
@@ -163,8 +259,8 @@
   }
 
   .contact-subtitle{
-    font-size:22px;
-   margin-bottom:6px;
+    font-size:var(--fs-lg);
+    margin-bottom:var(--sp-4);
   }
 
   .contact-title{

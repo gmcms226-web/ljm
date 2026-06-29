@@ -61,16 +61,3 @@ if ("geolocation" in navigator) {
     }
   );
 }
-
-new naver.maps.Marker({
-  position: userPosition,
-  map: map,
-  title: "내 위치",
-});
-
-const bounds = new naver.maps.LatLngBounds();
-bounds.extend(academyPosition);
-bounds.extend(userPosition);
-map.fitBounds(bounds);
-/* 그 아래에 거리 계산 */
-const R = 6371e3;

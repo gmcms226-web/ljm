@@ -51,7 +51,7 @@ function showCourseCards() {
   revealItems.forEach((item, index) => {
     const timer = setTimeout(() => {
       item.classList.add("is-visible");
-    }, index * 500);
+    }, index * 200);
 
     revealTimers.push(timer);
   });
@@ -125,6 +125,13 @@ menuBtn.addEventListener("click", () => {
 
 closeBtn.addEventListener("click", () => {
   mobileMenu.classList.remove("active");
+});
+/*과정 버튼 선택 토글*/
+document.querySelectorAll(".course-buttons button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".course-buttons button").forEach((b) => b.classList.remove("is-active"));
+    btn.classList.add("is-active");
+  });
 });
 /*로그인 모달 js*/
 const loginOpenBtns = document.querySelectorAll(".login-open");
