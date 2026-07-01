@@ -57,6 +57,22 @@ function closeLoginModal() {
   if (loginModal) loginModal.classList.remove("is-open");
 }
 
+function showToast(message) {
+  const toast = document.createElement("div");
+  toast.className = "auth-toast";
+  toast.textContent = message;
+  document.body.appendChild(toast);
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => toast.classList.add("is-visible"));
+  });
+
+  setTimeout(() => {
+    toast.classList.remove("is-visible");
+    setTimeout(() => toast.remove(), 400);
+  }, 3000);
+}
+
 function maskEmail(email) {
   const [local, domain] = email.split("@");
   const visible = local.slice(0, 2);
@@ -248,9 +264,9 @@ if (signupForm) {
         email,
         createdAt: new Date().toISOString()
       });
-      alert("회원가입이 완료되었습니다.");
       if (signupModal) signupModal.classList.remove("active");
       closeLoginModal();
+      showToast(`회원가입되었습니다. 안녕하세요~${name}님!`);
     } catch (error) {
       console.error("회원가입 오류:", error.code);
       if (error.code === "auth/email-already-in-use") {

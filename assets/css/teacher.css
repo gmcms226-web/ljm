@@ -8,7 +8,7 @@
   text-align: center;
   font-family: var(--font-title);
   font-size: var(--fs-section);
-  color: var(--color-primary);
+  color: #7B4A5A;
 }
 
 .teacher-list {
@@ -137,7 +137,7 @@
   .teacher-section__title {
     margin-bottom: var(--sp-12);
     font-size: var(--fs-2xl);
-    color: var(--color-primary);
+    color: #7B4A5A;
   }
 
   .teacher-list {
@@ -213,7 +213,7 @@
 
     font-family:var(--font-title);
     font-size:var(--fs-section);
-    color:var(--color-primary);
+    color:#7B4A5A;
 }
 .teacher-section__inner{
     padding-top:60px;

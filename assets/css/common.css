@@ -242,6 +242,32 @@ html{
 body{
   font-family: var(--font-base);
 }
+/* 회원가입/로그인 토스트 */
+.auth-toast {
+  position: fixed;
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-16px);
+  z-index: 99999;
+  padding: 16px 32px;
+  background: #7B4A5A;
+  color: #fff;
+  border-radius: 30px;
+  font-family: var(--font-base);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+
+.auth-toast.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
 /*발바닥효과*/
 .paw-effect {
   position: fixed;
@@ -275,45 +301,47 @@ body{
   bottom: 40px;
   z-index: 900;
 
-  width: 76px;
-  height: 76px;
   border: none;
-  border-radius: 50%;
-
-  background: var(--color-primary);
+  background: none;
+  padding: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   cursor: pointer;
-
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 
 .top-btn img {
-  width: 44px;
-  height: 44px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   pointer-events: none;
+  filter: drop-shadow(0 4px 8px rgba(244, 167, 185, 0.5));
+}
+
+.top-btn__label {
+  display: none;
 }
 
 .top-btn:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
+}
+
+.top-btn:hover img {
+  filter: drop-shadow(0 8px 16px rgba(244, 167, 185, 0.7));
 }
 
 @media (max-width: 767px) {
   .top-btn {
     right: 20px;
     bottom: 24px;
-    width: 54px;
-    height: 54px;
   }
 
   .top-btn img {
-    width: 32px;
-    height: 32px;
+    width: 52px;
+    height: 52px;
   }
 }
 /*로그인 모달*/

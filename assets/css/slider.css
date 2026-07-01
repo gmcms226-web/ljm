@@ -4,14 +4,16 @@
 }
 
 .practice-section__head{
-  display:flex;
-  align-items:center;
-  gap:60px;
+  text-align:center;
   margin-bottom:40px;
 }
 
-.practice-section__logo{
-  width:220px;
+.practice-section__title {
+  font-family: var(--font-title);
+  font-size: 40px;
+  font-weight: normal;
+  color: #7B4A5A;
+  margin-bottom: var(--sp-6);
 }
 
 .practice-section__desc{
@@ -78,14 +80,11 @@
   }
 
   .practice-section__head {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
     margin-bottom: 32px;
   }
 
-  .practice-section__logo {
-    width: 180px;
+  .practice-section__title {
+    font-size: 28px;
   }
 
   .practice-section__desc {
@@ -123,11 +122,11 @@
   margin-bottom: var(--sp-16);
   font-family: var(--font-title);
   font-size: var(--fs-section);
-  color: #333;
+  color: #7B4A5A;
 }
 
 .academy-section__title span {
-  color: var(--color-primary);
+  color: #7B4A5A;
 }
 
 .academy-slider {

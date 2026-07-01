@@ -134,7 +134,7 @@
   font-family: var(--font-title);
   font-size: var(--fs-section);
   font-weight: 800;
-  color:var(--color-primary-dark);
+  color: #7B4A5A;
 }
 
 .about-system__head p {

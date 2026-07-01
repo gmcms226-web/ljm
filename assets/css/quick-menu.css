@@ -29,26 +29,10 @@
   margin-bottom: 8px;
 }
 
-/* 강아지 캐릭터 일러스트 자리 - 직접 이미지 교체 */
-.quick-menu__character {
-  width: 56px;
-  height: 56px;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.quick-menu__character img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
 .quick-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   width: 100%;
   flex: 1;
 }
@@ -62,24 +46,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 4px;
   width: 100%;
   height: 100%;
   border-radius: 14px;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  font-size: 0.8rem;
-  font-weight: 700;
+  background: none;
+  border: 1.5px solid var(--color-primary-light);
+  color: #7B4A5A;
+  font-size: 0.72rem;
+  font-weight: 800;
   transition: var(--transition-base);
 }
 
 .quick-menu__link:hover {
-  background-color: var(--color-primary-dark);
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
 }
 
 .quick-menu__icon {
-  width: 26px;
-  height: 26px;
+  width: 46px;
+  height: 46px;
   object-fit: contain;
 }
 /* mobile */

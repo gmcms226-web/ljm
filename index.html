@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>이정민 애견미용학원</title>
+  <link rel="icon" type="image/png" href="./favicon.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/reset.css" />
   <link rel="stylesheet" href="./assets/css/common.css" />
@@ -116,11 +117,6 @@
        ========================================================================== -->
   <nav class="quick-menu" aria-label="퀵메뉴">
     <p class="quick-menu__title">Quick<br />menu</p>
-
-    <!-- 강아지 캐릭터 일러스트 자리 : assets/images/icons/quick-menu-character.png 로 직접 교체해주세요 -->
-    <div class="quick-menu__character">
-      <img src="./assets/images/icons/quick-icon.jpg" alt="강아지 캐릭터" />
-    </div>
 
     <ul class="quick-menu__list">
       <li>
@@ -297,11 +293,7 @@
   <div class="inner practice-section__inner">
 
     <div class="practice-section__head">
-      <img
-        src="./assets/images/logo/banner-logo.JPG"
-        alt="이정민 애견미용학원"
-        class="practice-section__logo"
-      />
+      <h2 class="practice-section__title">우리 학생들의 이야기</h2>
 
       <p class="practice-section__desc">
         애견미용 수업 현장과 수강생들의 실력을<br>
@@ -491,6 +483,10 @@
             <p class="sub">부담없는 시작 첫걸음</p>
             <h2 class="title">3급 기초반</h2>
           </div>
+          <div class="card__teacher">
+            <img src="./assets/images/teachers/teacher-kang.jpg" alt="강민경 강사">
+            <p>강민경 강사</p>
+          </div>
         </div>
       </div>
 
@@ -501,6 +497,10 @@
             <span class="badge">반려견 트림 미용반</span>
             <p class="sub">실습·실전 감각UP</p>
             <h2 class="title">2급 중급반</h2>
+          </div>
+          <div class="card__teacher">
+            <img src="./assets/images/teachers/teacher-kang.jpg" alt="강민경 강사">
+            <p>강민경 강사</p>
           </div>
         </div>
       </div>
@@ -513,6 +513,10 @@
             <p class="sub">자격증 취득의 시작</p>
             <h2 class="title">1급 프로반</h2>
           </div>
+          <div class="card__teacher">
+            <img src="./assets/images/teachers/teacher-kang.jpg" alt="강민경 강사">
+            <p>강민경 강사</p>
+          </div>
         </div>
       </div>
 
@@ -523,6 +527,10 @@
             <span class="badge">반려견 특급 미용반</span>
             <p class="sub">전문가로의 첫걸음</p>
             <h2 class="title">대학진학반</h2>
+          </div>
+          <div class="card__teacher">
+            <img src="./assets/images/teachers/teacher-lee.png" alt="이정민 강사">
+            <p>이정민 강사</p>
           </div>
         </div>
       </div>
@@ -535,6 +543,10 @@
             <p class="sub">성공적인 창업 시작</p>
             <h2 class="title">창업반</h2>
           </div>
+          <div class="card__teacher">
+            <img src="./assets/images/teachers/teacher-son.jpg" alt="손예은 강사">
+            <p>손예은 강사</p>
+          </div>
         </div>
       </div>
 
@@ -545,6 +557,10 @@
             <span class="badge">반려견 트림 미용반</span>
             <p class="sub">도그쇼의 주인공</p>
             <h2 class="title">핸들러반</h2>
+          </div>
+          <div class="card__teacher">
+            <img src="./assets/images/teachers/teacher-kim.jpg" alt="김수정 강사">
+            <p>김수정 강사</p>
           </div>
         </div>
       </div>
@@ -557,6 +573,10 @@
             <p class="sub">내일배움의 기회</p>
             <h2 class="title">국비지원반</h2>
           </div>
+          <div class="card__teacher">
+            <img src="./assets/images/teachers/teacher-kang.jpg" alt="강민경 강사">
+            <p>강민경 강사</p>
+          </div>
         </div>
       </div>
 
@@ -567,10 +587,6 @@
 <!--상담문의 섹션 -->
 <section id="contact" class="contact-section">
   <div class="inner">
-
-    <div class="contact-logo">
-      <img src="./assets/images/logo/banner-logo.JPG" alt="">
-    </div>
 
    <p class="contact-subtitle">1분이면 끝!</p>
 <h2 class="contact-title">빠른상담신청</h2>
@@ -796,27 +812,6 @@
 
   </div>
 </div>
-<!-- 회원가입 모달 -->
-<div class="signup-modal" id="signupModal">
-  <div class="login-modal__box">
-
-    <button type="button" class="signup-modal__close" aria-label="닫기">
-      ×
-    </button>
-
-    <h2 class="login-modal__title">회원가입</h2>
-
-    <form class="login-modal__form" id="signupForm">
-      <input type="email" id="signupEmail" placeholder="이메일">
-      <input type="password" id="signupPassword" placeholder="비밀번호">
-
-      <button type="submit" class="login-modal__submit">
-        회원가입
-      </button>
-    </form>
-
-  </div>
-</div>
 <!-- 상담 완료 모달 -->
 <div class="consult-modal" id="consultModal">
   <div class="consult-modal__box">
@@ -867,6 +862,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
  <button type="button" class="top-btn" aria-label="상단으로 이동">
   <img src="./assets/images/icons/paw-cursor.png" alt="">
+  <span class="top-btn__label">PageTop</span>
 </button>
  <script src="./assets/js/swiper-init.js"></script>
   <script src="./assets/js/common.js"></script>
