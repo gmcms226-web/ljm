@@ -37,8 +37,9 @@
 ## 3. ⚠️ 주의사항
 
 > [!WARNING]
-> - Firebase Auth 및 네이버 지도 API는 `file://` 환경에서 동작하지 않습니다. 반드시 로컬 서버를 통해 실행하세요.
-> - API 키(OpenWeatherMap, Firebase, Naver Maps)가 소스 코드에 직접 포함되어 있습니다. 실 서비스 배포 시 환경 변수로 분리하세요.
+> - Firebase Auth와 네이버 지도 API는 `file://` 환경에서 정상 동작하지 않습니다. 반드시 Live Server 또는 로컬 서버 환경에서 실행해야 합니다.
+> - Firebase 및 네이버 지도 API 키가 프론트엔드 코드에 포함되어 있습니다. 실서비스 배포 시 보안 환경 구성이 필요합니다.
+> - 일부 이미지는 포트폴리오 제작 목적의 예시 이미지로 구성되어 있습니다.
 
 <br>
 
@@ -48,28 +49,25 @@
 
 ### 담당 역할
 
-- [x] 기획
-- [x] UI/UX 디자인
-- [x] 프론트엔드 개발
-- [ ] 백엔드 개발
-- [ ] 배포 및 인프라
+- 기획
+- UI/UX 디자인
+- 프론트엔드 개발
+- 배포
 
 ### 작업 기간
 
-<!-- 실제 작업 기간으로 수정하세요 -->
-
 | 구분 | 기간 |
 |---|---|
-| 전체 기간 | 2025.00.00 ~ 2025.00.00 |
-| 기획 | 2025.00.00 ~ 2025.00.00 |
-| 디자인 | 2025.00.00 ~ 2025.00.00 |
-| 개발 | 2025.00.00 ~ 2025.00.00 |
+| 전체 기간 | 2026.06.08 ~ 2026.07.01 |
+| 기획 | 2026.06.08 ~ 2026.06.11 |
+| 디자인 | 2026.06.11 ~ 2026.06.18 |
+| 개발 | 2026.06.18 ~ 2026.07.01 |
 
 ### 기여도
 
 | 이름 | 역할 | 기여도 |
 |---|---|:---:|
-| 이정민 | 기획, 디자인, 프론트엔드 | 100% |
+| 추민석 | 기획, 디자인, 프론트엔드 | 100% |
 
 <br>
 
@@ -112,21 +110,27 @@
 
 | 도구 | 용도 |
 |---|---|
-| Claude Code | 코드 작성 보조, 디버깅, CSS 구조 설계 |
+| ChatGPT | 코드 작성 보조, 오류 해결, README 정리 |
+| Claude | 코드 구조 검토 및 일부 구현 보조 |
+| Gemini | 이미지 생성 및 시각 자료 제작 보조 |
+| Figma | 와이어프레임 및 디자인 시안 제작 |
 
 ### AI 활용 내용
 
 - Firebase Auth 이벤트 충돌 해결 방법 참고
 - 반응형 레이아웃 그리드 구조 개선 제안 수용
 - CSS 변수 및 BEM 네이밍 일관성 검토
+- 웹페이지 구조 설계 검토
 
 ### 직접 구현한 내용
 
 - 기존 사이트 분석 및 리뉴얼 기획 (문제점 도출 → 개선 방향 설정)
 - 전체 UI/UX 설계 및 디자인 시스템 구축
-- 페이지별 CSS 아키텍처 설계 (BEM 방법론 적용)
-- 네이버 지도 API 연동 및 하버사인 거리 계산 로직
-- Firebase Firestore 사용자 데이터 설계
+- 페이지별 HTML/CSS 작성 및 반응형 레이아웃 구현
+- Swiper 슬라이더 적용 및 커스텀 설정
+- 네이버 지도 API 연동 및 현재 위치 기반 거리 계산
+- Firebase 이메일 회원가입 / 로그인 / 구글 로그인 구현
+- 로그인 모달, 회원가입 모달, TOP 버튼, 모바일 메뉴 구현
 
 <br>
 
@@ -134,11 +138,9 @@
 
 ## 7. 🔗 프로젝트 링크
 
-<!-- 배포 URL이 생기면 # 부분을 실제 주소로 교체하세요 -->
-
 | 구분 | 링크 |
 |---|---|
-| 🌐 배포 사이트 | [바로가기](#) |
+| 🌐 배포 사이트 | [바로가기](https://gmcms226-web.github.io/ljm/) |
 | 🎨 기획서 (Canva) | [바로가기](https://canva.link/5qzd6oxqb1w9xog) |
 | 🐙 GitHub | [바로가기](https://github.com/gmcms226-web/ljm) |
 
@@ -411,7 +413,7 @@ npx serve .
 ```
 MIT License
 
-Copyright (c) 2025 이정민
+Copyright (c) 2025 추민석
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -428,6 +430,6 @@ copies or substantial portions of the Software.
 
 <div align="center">
 
-Made with ❤️ by [이정민](https://github.com/gmcms226-web)
+Made with ❤️ by [추민석](https://github.com/gmcms226-web)
 
 </div>
