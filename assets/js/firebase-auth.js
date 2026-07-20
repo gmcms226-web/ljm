@@ -89,6 +89,7 @@ function showResult(el, message, isSuccess) {
 if (signupOpenBtn && signupModal) {
   signupOpenBtn.addEventListener("click", (e) => {
     e.preventDefault();
+    closeLoginModal();
     signupModal.classList.add("active");
   });
 }
@@ -102,6 +103,7 @@ if (signupCloseBtn && signupModal) {
 if (findOpenBtn && findModal) {
   findOpenBtn.addEventListener("click", (e) => {
     e.preventDefault();
+    closeLoginModal();
     // 첫 번째 탭(아이디 찾기) 초기화
     document.querySelectorAll(".find-modal__tab").forEach((t, i) => {
       t.classList.toggle("is-active", i === 0);
