@@ -245,12 +245,38 @@
     gap: 8px;
   }
 
+  /* 데스크톱 고정폭(180/200/250px)을 비율로 완화 — 좁은 태블릿에서 팁 영역 확보 */
+  .hero__info-item--hours {
+    flex: 0 0 22%;
+    width: auto;
+  }
+
+  .hero__info-item:nth-child(2) {
+    flex: 0 0 25%;
+    width: auto;
+  }
+
+  .hero__info-item--weather {
+    flex: 0 0 24%;
+    width: auto;
+  }
+
   .hero__info-title {
     font-size: 0.9rem;
   }
 
+  .hero__info-sub {
+    font-size: 0.75rem;
+  }
+
   .hero__hours-row {
     font-size: 0.72rem;
+  }
+
+  .hero__day-badge {
+    min-width: 36px;
+    padding: 3px 6px;
+    font-size: 0.7rem;
   }
 
   .hero__weather-icon {
@@ -332,6 +358,13 @@
   /* 하단 행 좌측(3번)의 왼쪽 border 제거 */
   .hero__info-item:nth-child(3) {
     border-left: none;
+  }
+
+  /* 데스크톱·태블릿의 :nth-child(2) 규칙이 명시도에서 앞서므로 같은 명시도로 재정의
+     (이게 없으면 2번 아이템이 고정폭을 유지해 2×2 그리드가 깨짐) */
+  .hero__info-item:nth-child(2) {
+    flex: 0 0 50%;
+    width: auto;
   }
 
   .hero__info-item--weather {
