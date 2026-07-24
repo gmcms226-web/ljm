@@ -368,10 +368,20 @@
   }
 
   .hero__info-item--weather {
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 6px;
+  }
+
+  /* 제목은 왼쪽 끝, 아이콘+기온은 한 덩어리로 오른쪽 끝에 배치 */
+  .hero__info-item--weather .hero__weather-icon {
+    margin-left: auto;
   }
 
   .hero__info-item--hours {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
     padding-left: 14px;
   }
 
